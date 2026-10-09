@@ -1,0 +1,27 @@
+#This week focuses on JavaScript.
+#Use this terminal to practise Python logic 
+#that mirrors what you are doing in the browser.
+
+#Replicate JS array methods in Python
+print("===Exercise 1: JS VARIABLES===")
+
+fruits = ['mango','banana','apple']
+fruits.append('grape')                 #push
+print(fruits)
+print(fruits.pop())                    #pop
+print(len(fruits))                     #length
+
+print("==Exercise 2: FETCH LOGIC===")
+
+import urllib.request, json
+#Replicate what the Fetch API does in Python.
+#Make a Get request and handle the response.
+
+url = 'https://httpbin.org/get'
+with urllib.request.urlopen (url) as r:
+    data = json.loads(r.read())
+print('Status : 200 OK')
+print('Origin IP:', data.get('origin', 'unknown'))
+
+print("\n===Exercise 3: JSON SERIALISATION===")
+

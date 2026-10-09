@@ -1,0 +1,29 @@
+contacts = [
+    {"name":"Moses Aboka","phone":"0791935747","skill":"teaching","city":"Nairobi"},
+    {"name":"Moraa Sakwa","phone":"0726843057","skill":"drawing","city":"London"},
+    {"name":"Tylo Nambuto","phone":"0113722024","skill":"fishing","city":"Mombasa"},
+    {"name":"Philip Bulimo","phone":"0717805167","skill":"welding","city":"Kisumu"},
+    {"name":"Felix Murule","phone":"074567890","skill":"tilling","city":"Nairobi"},
+]
+
+
+contacts.append({
+    "name":"Kevin Mwangi",
+    "phone":"0767890123",
+    "skill":"beekeeping",
+    "city":"Nakuru"
+})
+
+print("=====CONTACT BOOK=====")
+for i, contact in enumerate(contacts):
+    print(f"\n{i+1}.{contact['name']}")
+    print(f"Phone:{contact['phone']}")
+    print(f"Skill:{contact['skill']}")
+    print(f"City:{contact['city']}")
+
+print("\n====NAIROBI CONTACTS====")
+for contact in contacts:
+    if contact["city"] == "Nairobi":
+        print(f"{contact['name']} | {contact['skill']}")
+
+print(f"\nTotall contacts : {len(contacts)}")            
